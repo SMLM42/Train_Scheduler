@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Trainz</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="jumbotron text-center" style="background: black;">
+                    <h1 class="display-5 text-white">Anytime is Train-Time</h1>
+                    <h3 class="display-5 text-white">Choo-Choo!!!</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card mb-4">
+                    <div class="card-header">Current Train Schedule</div>
+
+                    <div class="card-body">
+                        <table class="table">
+                            <span>Current Time: </span><span id="Time"></span>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+
+                                </tr>
+                            </thead>
+                            <tbody class="display" id="display">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card mb-4">
+                    <div class="card-header">Add Train</div>
+                    <form>
+                        <div class="form-group col-sm-12">
+                            <label>Train Name</label>
+                            <input class="form-control" id="Name" placeholder="">
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <label>Destination</label>
+                            <input class="form-control" id="Destination" placeholder="">
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <label>First Train Time(HH:mm-military time)</label>
+                            <input class="form-control" type="First" id="Start" placeholder="08:14">
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <label>Frequency (min)</label>
+                            <input class="form-control" id="Frequency" placeholder="">
+                        </div>
+                        <button type="submit" class="btn float-right btn-primary" id="Submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+<script src="assets/javascript/app.js"></script>
+
+</html>
